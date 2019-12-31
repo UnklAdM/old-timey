@@ -10,7 +10,7 @@
 #
 
 # Flags for safer shell-scripting.
-set -eufC
+#set -eufC
 
 CURRENT_DATE=$(date "+%F %T")
 COMMAND="$1"
@@ -115,6 +115,6 @@ case "${COMMAND}" in
   int) timey_interruption ;;
   monitor) timey_monitor ;;
   tasks) timey_tasks "$1" ;;
-  *) printf "Uh-oh!"; exit 1;;
+  *) printf "Uh-oh! - [in out hours weekly-hours int monitor tasks] expected.\n"; exit 1;;
 esac
 
