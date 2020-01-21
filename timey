@@ -46,12 +46,12 @@ timey_out() {
 
 # Show our current hours today.
 timey_hours() {
-  ledger --time-colon --file "${TIMELOG}" bal -p "since today";
+  ledger --time-colon --time-report --file "${TIMELOG}" bal -p "since today";
 }
 
 # Show our last week's hours.
 timey_weekly_hours() {
-  ledger --time-colon --file "${TIMELOG}" bal -p "since 7 days ago";
+  ledger --time-colon --time-report --file "${TIMELOG}" bal -p "since 7 days ago";
 }
 
 # Switch the user's task.
